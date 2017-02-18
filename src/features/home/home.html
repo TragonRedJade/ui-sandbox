@@ -1,0 +1,139 @@
+<nav class="navbar navbar-toggleable-md">
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand-logo" href="#"><img src="//cdn.redjade.net/images/logo.png"></a>
+
+  <div class="collapse navbar-collapse" id="navbarColor01">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link active" href="#">Projects <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Recruiting</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Analyses</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Collection</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Admin</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<nav class="navbar navbar-secondary navbar-toggleable-md">
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarColor01">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Features</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Pricing</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">About</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<br />
+<br />
+<div class="container">
+  <div class="btn-group" uib-dropdown>
+    <button id="split-button" type="button" class="btn btn-primary">Action</button>
+    <button type="button" class="btn btn-primary" uib-dropdown-toggle>
+      <span class="caret"></span>
+      <span class="sr-only">Split button!</span>
+    </button>
+    <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="split-button">
+      <a class="dropdown-item" href="#">Action</a>
+      <a class="dropdown-item" href="#">Another action</a>
+      <a class="dropdown-item" href="#">Something else here</a>
+      <div class="dropdown-divider"></div>
+      <a class="dropdown-item" href="#">Separated link</a>
+    </ul>
+  </div>
+  <br/>
+  <br/>
+
+
+  <form>
+    <div class="form-group">
+      <label class="form-control-label" for="exampleInputEmail1">Email address</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+    <div class="form-group">
+      <label class="form-control-label" for="exampleInputPassword1">Password</label>
+      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+    </div>
+    <div class="form-group">
+      <label class="form-control-label" for="exampleSelect1">Example select</label>
+      <ui-select ng-model="vm.country.selected" theme="bootstrap" title="Choose a country">
+        <ui-select-match placeholder="Select or search a country in the list...">{{$select.selected.name}}</ui-select-match>
+        <ui-select-choices repeat="country in vm.countries | filter: $select.search">
+          <span ng-bind-html="country.name | highlight: $select.search"></span>
+          <small ng-bind-html="country.code | highlight: $select.search"></small>
+        </ui-select-choices>
+      </ui-select>
+    </div>
+
+    <div class="form-group">
+      <label class="form-control-label" for="exampleSelect1">Example multi-select</label>
+      <ui-select multiple ng-model="vm.multi.colors" theme="bootstrap" ng-disabled="vm.disabled" close-on-select="false" title="Choose a color">
+        <ui-select-match placeholder="Select colors...">{{$item}}</ui-select-match>
+        <ui-select-choices repeat="color in vm.availableColors | filter:$select.search">
+          {{color}}
+        </ui-select-choices>
+      </ui-select>
+    </div>
+
+    <div class="form-group">
+      <label class="form-control-label" for="exampleSelect1">Example complex options</label>
+      <ui-select ng-model="vm.person.selected" theme="bootstrap" ng-disabled="vm.disabled" title="Choose a person">
+        <ui-select-match placeholder="Select a person in the list or search his name/age...">{{$select.selected.name}}</ui-select-match>
+        <ui-select-choices repeat="person in vm.people | PropsFilter: {name: $select.search, age: $select.search}">
+          <div ng-bind-html="person.name | highlight: $select.search"></div>
+          <small>email: {{person.email}}
+            age: <span ng-bind-html="''+person.age | highlight: $select.search"></span>
+      </small>
+        </ui-select-choices>
+      </ui-select>
+    </div>
+
+    <div class="form-group">
+      <label class="form-control-label" for="exampleTextarea">Example textarea</label>
+      <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+    </div>
+
+    <!-- <h4>Popup</h4>
+    <div class="row">
+      <div class="col-md-6">
+        <p class="input-group">
+          <input type="text" class="form-control" uib-datepicker-popup="{{vm.format}}" ng-model="vm.dt" is-open="vm.opened" min-date="vm.minDate" max-date="'2015-06-22'" datepicker-options="vm.dateOptions" ng-required="true" close-text="Close" />
+          <span class="input-group-btn">
+                <button type="button" class="btn btn-default" ng-click="vm.open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+              </span>
+        </p>
+      </div>
+    </div> -->
+
+    <div class="form-group">
+      <label class="form-control-label" for="exampleTextarea">Example textarea</label>
+      <adm-dtp ng-model="vm.dt"></adm-dtp>
+    </div>
+
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+
+</div>
