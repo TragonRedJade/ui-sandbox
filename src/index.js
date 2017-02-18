@@ -5,15 +5,17 @@ import angular from 'angular';
 import uirouter from 'angular-ui-router';
 import angularbootstrap from 'angular-ui-bootstrap'
 import sanitize from 'angular-sanitize';
-import uiselect from 'ui-select';
 import routing from './app.config';
-import datepicker from 'adm-dtp';
 import filters from './filters';
 import home from './features/home';
+import calendar from './features/calendar';
 
 
-angular.module('app', [uirouter, angularbootstrap, sanitize, uiselect, datepicker, filters, home])
-  .config(routing);
+
+angular.module('app', [uirouter, angularbootstrap, sanitize, filters, home, calendar])
+  .config(routing)
+  .config(function($locationProvider) {  $locationProvider.html5Mode(true); });
+
 
 
 if(module.hot) {

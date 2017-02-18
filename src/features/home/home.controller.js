@@ -267,39 +267,7 @@ export default class HomeController {
 
 
     //  ************************** datepicker ***************************
-    this.today = function() {
-      this.dt = new Date();
-    };
+
     this.dt = new Date();
-
-    this.clear = function () {
-      this.dt = null;
-    };
-
-    // Disable weekend selection
-    this.disabled = function(date, mode) {
-      return ( mode === 'day' && ( date.getDay() === 0 || date.getDay() === 6 ) );
-    };
-
-    this.toggleMin = function() {
-      this.minDate = this.minDate ? null : new Date();
-    };
-    this.toggleMin();
-
-    this.open = function($event) {
-      debugger
-      $event.preventDefault();
-      $event.stopPropagation();
-
-      this.opened = true;
-    };
-
-    this.dateOptions = {
-      formatYear: 'yy',
-      startingDay: 1
-    };
-
-    this.formats = ['dd-MMMM-yyyy', 'yyyy/MM/dd', 'dd.MM.yyyy', 'shortDate'];
-    this.format = this.formats[3];
   }
 }

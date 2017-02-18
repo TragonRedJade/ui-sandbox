@@ -8,6 +8,7 @@ var server = new WebpackDevServer(compiler, {
   hot: true,
   filename: config.output.filename,
   publicPath: config.output.publicPath,
+  historyApiFallback: true,
   stats: {
     colors: true
   }

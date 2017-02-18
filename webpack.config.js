@@ -15,8 +15,8 @@ const entry = PRODUCTION
     ]
 
 const plugins =  PRODUCTION
-  ? []
-  : [ new webpack.HotModuleReplacementPlugin(), new ngAnnotatePlugin({add: true}) ]
+  ? [ new webpack.ProvidePlugin({$: "jquery", "window.jQuery": "jquery","moment": "moment"}) ]
+  : [ new webpack.HotModuleReplacementPlugin(), new ngAnnotatePlugin({add: true}), new webpack.ProvidePlugin({$: "jquery", "window.jQuery": "jquery","moment": "moment"}) ]
 
 module.exports = {
   entry: entry,
