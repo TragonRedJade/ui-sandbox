@@ -269,5 +269,6 @@ export default class HomeController {
     //  ************************** datepicker ***************************
 
     this.dt = new Date();
+    this.dt2 = new Date();
   }
 }

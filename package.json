@@ -20,7 +20,8 @@
     "fullcalendar": "^3.2.0",
     "jquery": "^3.1.1",
     "moment": "^2.17.1",
-    "ui-select": "github:tragonredjade/ui-select"
+    "ui-select": "github:tragonredjade/ui-select",
+    "ui-listView": "github:tragonredjade/ui-listview"
   },
   "devDependencies": {
     "babel-core": "^6.22.1",

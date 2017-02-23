@@ -3,7 +3,7 @@ import uirouter from 'angular-ui-router';
 import routing from './calendar.routes';
 
 require('fullcalendar');
-require('fullcalendar/dist/fullcalendar.css');
+require('../../stylesheets/fullcalendar.css');
 require('angular-ui-calendar');
 
 import CalendarController from './calendar.controller';
