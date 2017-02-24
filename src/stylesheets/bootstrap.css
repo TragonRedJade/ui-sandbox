@@ -4315,7 +4315,8 @@ tbody.collapse.show {
   -webkit-flex: 1 1 auto;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
-  padding: 1.25rem;
+  padding: 20px;
+  border-left: 4px solid #e41f00;
 }
 
 .card-title {
@@ -4336,7 +4337,7 @@ tbody.collapse.show {
 }
 
 .card-link + .card-link {
-  margin-left: 1.25rem;
+  margin-left: 20px;
 }
 
 .card > .list-group:first-child .list-group-item:first-child {
@@ -4350,9 +4351,9 @@ tbody.collapse.show {
 }
 
 .card-header {
-  padding: 0.75rem 1.25rem;
+  padding: 0.75rem 20px;
   margin-bottom: 0;
-  background-color: #f7f7f9;
+  background-color: #fff;
   border-bottom: 1px solid rgba(51, 50, 57, 0.125);
 }
 
@@ -4360,9 +4361,23 @@ tbody.collapse.show {
   border-radius: calc(0.13rem - 1px) calc(0.13rem - 1px) 0 0;
 }
 
+.card-header:hover {
+  padding-left: 16px;
+  border-left: 4px solid #aaa;
+}
+
+.card-header.active, .card-header.open {
+  padding-left: 16px;
+  border-left: 4px solid #e41f00;
+}
+
+.card.card-stacked .card-header {
+  border-bottom: 0;
+}
+
 .card-footer {
-  padding: 0.75rem 1.25rem;
-  background-color: #f7f7f9;
+  padding: 0.75rem 20px;
+  background-color: #fff;
   border-top: 1px solid rgba(51, 50, 57, 0.125);
 }
 
@@ -4371,15 +4386,15 @@ tbody.collapse.show {
 }
 
 .card-header-tabs {
-  margin-right: -0.625rem;
+  margin-right: -10px;
   margin-bottom: -0.75rem;
-  margin-left: -0.625rem;
+  margin-left: -10px;
   border-bottom: 0;
 }
 
 .card-header-pills {
-  margin-right: -0.625rem;
-  margin-left: -0.625rem;
+  margin-right: -10px;
+  margin-left: -10px;
 }
 
 .card-primary {
@@ -4603,6 +4618,14 @@ tbody.collapse.show {
   .card-group .card:not(:first-child):not(:last-child) .card-img-bottom {
     border-radius: 0;
   }
+}
+
+.in.collapse {
+  display: block;
+}
+
+.card.card-stacked .card-header {
+  border-bottom: 0;
 }
 
 @media (min-width: 576px) {

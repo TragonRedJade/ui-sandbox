@@ -12,3 +12,27 @@
     </uib-tab>
   </uib-tabset>
 </div>
+
+<br/>
+<br/>
+
+<div class="card card-stacked">
+  <div class="card-header" ng-class="{open: !vm.isNavCollapsed}" ng-click="vm.isNavCollapsed = !vm.isNavCollapsed">
+    Featured
+  </div>
+  <div class="card-block" uib-collapse="vm.isNavCollapsed">
+    <h4 class="card-title">Special title treatment</h4>
+    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+<div class="card card-stacked">
+  <div class="card-header" ng-class="{open: !vm.isNavCollapsed2}"  ng-click="vm.isNavCollapsed2 = !vm.isNavCollapsed2">
+    Also Featured
+  </div>
+  <div class="card-block" uib-collapse="vm.isNavCollapsed2">
+    <h4 class="card-title">Special title treatment</h4>
+    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>

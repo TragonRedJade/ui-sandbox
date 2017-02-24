@@ -14,5 +14,8 @@ export default class TabsAndAccordiansController {
     this.model = {
       name: 'Tabs'
     };
+
+    this.isNavCollapsed = true;
+    this.isNavCollapsed2 = true;
   }
 }
