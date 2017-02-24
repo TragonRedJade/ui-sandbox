@@ -2927,7 +2927,7 @@ input[type="button"].btn-block {
   transition: opacity 0.15s linear;
 }
 
-.fade.show {
+.fade.in, .fade.show {
   opacity: 1;
 }
 
@@ -4620,7 +4620,7 @@ tbody.collapse.show {
   }
 }
 
-.in.collapse {
+.card-block.in.collapse {
   display: block;
 }
 
@@ -5311,6 +5311,7 @@ button.close {
           transform: translate(0, -25%);
 }
 
+.modal.in .modal-dialog,
 .modal.show .modal-dialog {
   -webkit-transform: translate(0, 0);
        -o-transform: translate(0, 0);
@@ -5363,7 +5364,7 @@ button.close {
   opacity: 0;
 }
 
-.modal-backdrop.show {
+.modal-backdrop.in, .modal-backdrop.show {
   opacity: 0.5;
 }
 
@@ -5449,6 +5450,25 @@ button.close {
   .modal-lg {
     max-width: 800px;
   }
+}
+
+.modal.alert .modal-content .modal-header {
+  border-bottom: 0;
+}
+
+.modal.alert .modal-content .modal-header .modal-title {
+  margin: 0 auto;
+  color: #e41f00;
+}
+
+.modal.alert .modal-content .modal-body {
+  text-align: center;
+}
+
+.modal.alert .modal-content .modal-footer {
+  display: block;
+  text-align: center;
+  border-top: 0;
 }
 
 .tooltip {

@@ -1,5 +1,5 @@
 export default class HomeController {
-  constructor($stateParams) {
+  constructor($stateParams, $uibModal) {
     //  ************************** select boxes ***************************
     this.stateParams = $stateParams
     this.country = {};
@@ -270,5 +270,15 @@ export default class HomeController {
 
     this.dt = new Date();
     this.dt2 = new Date();
+
+    this.openModal = () => {
+      var modalInstance = $uibModal.open({
+        animation: true,
+        ariaLabelledBy: 'modal-title',
+        ariaDescribedBy: 'modal-body',
+        windowClass: 'alert',
+        template: require('./myModalContent.html')
+      });
+    }
   }
 }
