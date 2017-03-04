@@ -11,7 +11,7 @@ const entry = PRODUCTION
   : [
       './src/index.js',
       'webpack/hot/dev-server',
-      'webpack-dev-server/client?http://localhost:8080'
+      'webpack-dev-server/client?http://localhost:9000'
     ]
 
 const plugins =  PRODUCTION
